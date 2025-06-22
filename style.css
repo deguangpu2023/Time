@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: #6a0d0d; /* Fallback color */
+    color: #f0e6d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1578869443697-83b67af1326f?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.container {
+    background-color: rgba(100, 10, 10, 0.6);
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.clock {
+    font-size: 1.6em;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown span:first-child {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffd700; /* Gold color for numbers */
+}
+
+.countdown .label {
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.next-year {
+    font-size: 1.2em;
+}
+
+/* Progress Bar Styles */
+.progress-section {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.progress-container {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    height: 10px;
+    margin: 20px auto 10px;
+    position: relative;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #ffc837, #ff8008);
+    width: 0%; /* Will be set by JS */
+    height: 100%;
+    border-radius: 20px;
+    transition: width 1s ease-out;
+}
+
+.rocket {
+    position: absolute;
+    top: -8px; 
+    left: 0%; /* Will be set by JS */
+    font-size: 1.6em;
+    transform: translateX(-50%);
+    transition: left 1s ease-out;
+}
+
+.progress-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #f0e6d2;
+} 

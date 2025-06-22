@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农历新年倒计时</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="clock" class="clock">--:--:--</div>
+        <h1>距离农历新年还有</h1>
+        <div id="countdown" class="countdown">
+            <div>
+                <span id="days">00</span>
+                <span class="label">天</span>
+            </div>
+            <div>
+                <span id="hours">00</span>
+                <span class="label">时</span>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <span class="label">分</span>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <span class="label">秒</span>
+            </div>
+        </div>
+        <div class="next-year">
+            <span id="next-year-date"></span>
+        </div>
+        <div class="progress-section">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+                <span id="rocket" class="rocket">🚀</span>
+            </div>
+            <div class="progress-text">
+                <span id="progress-percentage"></span>
+                <span> 还要加油哦！</span>
+                <span> From 金鸡聚宝盆 </span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
