@@ -47,7 +47,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .countdown div {
@@ -110,4 +110,57 @@ h1 {
     font-size: 1.1em;
     font-weight: bold;
     color: #f0e6d2;
+}
+
+/* 手机端适配 */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+    }
+    .container {
+        padding: 18px 6px;
+        border-radius: 0;
+        width: 100vw;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .clock {
+        font-size: 1.1em;
+        padding: 3px 4px;
+    }
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    .countdown {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    .countdown span:first-child {
+        font-size: 2.1em;
+    }
+    .countdown .label {
+        font-size: 0.9em;
+    }
+    .next-year {
+        font-size: 1em;
+    }
+    .progress-section {
+        margin-top: 18px;
+    }
+    .progress-container {
+        width: 98vw;
+        height: 8px;
+        margin: 10px auto 6px;
+    }
+    .rocket {
+        font-size: 1.1em;
+        top: -7px;
+    }
+    .progress-text {
+        font-size: 0.95em;
+    }
 } 
