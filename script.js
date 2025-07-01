@@ -93,15 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateYearProgress() {
         const now = getCorrectedDate();
-        const year = now.getFullYear();
-        const yearStart = new Date(year, 0, 1); // Jan 1st
-        const yearEnd = new Date(year + 1, 0, 1); // Jan 1st of next year
-        
-        const yearTotalMilliseconds = yearEnd - yearStart;
-        const elapsedMilliseconds = now - yearStart;
-        
+        const year = now.getUTCFullYear();
+        // 用UTC时间计算，避免时区误差
+        const yearStart = new Date(Date.UTC(year, 0, 1)); // 今年UTC 1月1日0点
+        const yearEnd = new Date(Date.UTC(year + 1, 0, 1)); // 明年UTC 1月1日0点
+        const yearTotalMilliseconds = yearEnd.getTime() - yearStart.getTime();
+        const elapsedMilliseconds = now.getTime() - yearStart.getTime();
         const percentage = (elapsedMilliseconds / yearTotalMilliseconds) * 100;
-        
         if (progressBarEl && rocketEl && progressPercentageEl) {
             progressBarEl.style.width = `${percentage}%`;
             rocketEl.style.left = `${percentage}%`;
